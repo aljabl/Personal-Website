@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Press Start 2P', Times, serif;
+}
+
+/*
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*/
+
+body {
+    min-height: 100vh;
+    background-color: rgb(169, 169, 169);
+    margin: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    line-height: 1.5;
+    word-spacing: 1.4px;
+    font-family: 'Press Start 2P';
+}
+
+/* defining 7 x 5 summary grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.3em;
+    height: 95vh;
+    
+}
+.summary-grid > div{
+    padding: 0.5em;
+}
+
+/* defining widths and heights of our item boxes. We add the span we want
+to the specific item in the html file  */
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+.grid-col-span-3 {
+    grid-column: span 3;
+}
+.grid-col-span-5 {
+    grid-column: span 5;
+}
+
+.grid-row-span-2 {  
+    grid-row: span 2; 
+} 
+.grid-row-span-3 {
+    grid-row: span 3;
+}
+
+.grid-row-span-4 {
+    grid-row: span 4;
+}
+/* .grid-row-span-3 { */
+    /* grid-row: span 3; */
+/* } */ 
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 80px;
+    background: #493232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+    opacity: 1;
+    border: double black;
+    border-width: 7px;
+
+}
+
+.logo {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    /* how far the words are spaced apart */
+    margin-left: 35px; 
+}
+.navbar a:hover {
+    color: #fb0000;
+}
+
+/* line that appears under navbar words when you hover */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    /* height of line */
+    top: 150%;
+    left: 0;
+    /*  how much is visible before you hover */
+    width: 0%;
+    /* line thickness */
+    height: 2px;
+    background: #fb0000; 
+}
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* mobile view */
+@media only screen and (max-width: 980px){
+    .summary-grid {
+        margin-top: 35%;
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+        grid-row-gap: 40px;
+    }
+    .summary-grid > div {
+        padding: 20px;
+    }
+    .header {
+        margin-bottom: 20%;
+        
+    }
+    .logo {
+        font-size: 25px;
+        align-items: center;
+
+    }
+    .navbar {
+        opacity: 0;
+    }
+
+    .item1 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item1:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+    .item2 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #926b6b;
+    }
+    .item2:hover {
+        background-color: #493232;
+        color: #eee;
+    }
+    .item3 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item3:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+    .item4 {
+         
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #926b6b;
+    }
+    .item4:hover {
+        background-color: #493232;
+        color: #eee;
+    }
+    .item5 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item5:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+
+}
+@media only screen and (min-width: 981px){
+    .item1 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item1:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+    .item2 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #926b6b;
+    }
+    .item2:hover {
+        background-color: #493232;
+        color: #eee;
+    }
+    .item3 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item3:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+    .item4 {
+         
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #926b6b;
+    }
+    .item4:hover {
+        background-color: #493232;
+        color: #eee;
+    }
+    .item5 {
+        
+        padding: 0.5em;
+        border: double black;
+        border-width: 7px;
+        background-color: #eee;
+    }
+    .item5:hover {
+        background-color: #926b6b;
+        color: #eee;
+    }
+
+
+}
+/*
+.container {
+    display: grid;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 11px 50px 25px 25px 11px 150px 11px 300px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+}
+
+.item1 {
+    /*
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    */
+    /*
+    grid-row: 2/12 ;
+    grid-column: 1/12;
+    background-color: white;
+    padding: 0.5em;
+    border: double black;
+    border-width: 7px;
+}
+.item2 {
+    grid-row: 2/16 ;
+    grid-column: 13/26 ;
+    background-color: white; 
+    padding: 0.5em;
+    border: double black;
+    border-width: 7px;
+}
+
+.item3 {
+    grid-row: 13 / 16 ;
+    grid-column: 1/ 10;
+    background-color: white; 
+    padding: 0.5em;
+    border: double black;
+    border-width: 7px;
+}
+
+.item4 {
+    grid-row: 17/18;
+    grid-column: 1/20;
+    background-color: white; 
+    padding: 0.5em;
+    border: double black;
+    border-width: 7px;
+}
+
+.item5 {
+    grid-row: 19/20;
+    grid-column: 1/20;
+    background-color: white; 
+    padding: 0.5em;
+    border: double black;
+    border-width: 7px;
+}
+
+.item6 {
+    grid-row: 1/21;
+    grid-column: 1/30;
+    background-color: transparent;
+}
+/*
+@media only screen and (max-width: 639px) {
+    .container {
+        padding: 3.75%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+    }
+    .container > div {
+        padding: 10px;
+    }
+    .container >div:nth-child(3n+2) {
+        background-color: blueviolet
+    }
+}
+
+
+*/
