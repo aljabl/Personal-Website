@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+/* Container for larger margins */
+.container {
+    margin: 0 auto; /* Center the container */
+    padding: 0 2rem; /* Add padding on the sides */
+    max-width: 1000px; /* Set a max-width for the container */
+}
+
 body {
     background: #1C2C2E;
     margin: 0;
@@ -21,10 +28,15 @@ body {
     top: 37vh;
 }
 
+/* --------------------------------- NAVBAR --------------------------------- */
 header {
-    background-color: #333;
+    background-color: transparent; /* Make header background transparent */
     color: white;
     padding: 1rem;
+}
+
+nav {
+    background-color: transparent; /* Make nav background transparent */
 }
 
 nav ul {
@@ -32,11 +44,16 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end; /* Right-align items */
 }
 
 nav ul li {
     display: inline;
+    margin-left: 1rem; /* Adjust the spacing between navbar items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove margin for the first item */
 }
 
 nav ul li a {
@@ -46,8 +63,24 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: rgba(255, 255, 255, 0.1); /* Add subtle hover effect */
 }
+
+.resume-button {
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.resume-button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 
 section {
     padding: 2rem;
@@ -60,8 +93,9 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
     text-align: center;
 }
 
@@ -75,15 +109,20 @@ section {
 .hero-text {
     flex: 1;
     padding-right: 2rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .hero-text p {
     font-size: 1.2rem; /* Adjusting font size for introductory text */
+    color: #1C2C2E;
 }
 
 .hero-text h1 {
     margin-top: 0;
     font-size: 3rem; /* Adjusting font size for name header */
+    color: #1C2C2E;
 }
 
 .hero-text p.description {
@@ -94,12 +133,16 @@ section {
     flex: 1;
     display: flex;
     justify-content: center;
+
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* Social icons styling */
@@ -108,8 +151,8 @@ section {
 }
 
 .social-icons a {
-    color: #333;
-    font-size: 1.5rem;
+    color: #1C2C2E;
+    font-size: 2rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
 }
@@ -119,26 +162,38 @@ section {
 }
 
 /* ----------------------------- PROJECT SECTION ---------------------------- */
+.projects h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
 .project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-around;
+    /* border: 1px solid #ccc;
+    border-radius: 4px; */
 }
 
 .project {
-    background-color: #f5f5f5;
+    /* background-color: #1C2C2E; */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
     padding: 1rem;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(50% - 2rem);
     max-width: calc(50% - 2rem);
     text-decoration: none;
-    color: black;
+    color: white;
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
 
 .project h2 {
-    margin-top: 0;
+    margin: 0 
+}
+.project h5 {
+    margin: 0;
 }
 
 .tags {
@@ -156,19 +211,54 @@ section {
 }
 
 .project:hover {
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.6); /* Add shadow to the left side */;
+    
 }
 
 .no-hover:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
 }
 
-/* ------------------------------ SKILLS SECTION ----------------------------- */
-.skills-background {
-    background-color: white;
+/* ------------------------------ SKILLS AND CLASSES SECTION ----------------------------- */
+#skills-and-classes {
+    display: flex;
+    gap: 2rem; /* Adjust the gap between the sections */
     padding: 2rem;
-    border-radius: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.skills-section,
+.classes-section {
+    flex: 1; /* Each section takes half of the available space */
+}
+
+.skills-section h1,
+.classes-section h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.classes-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.classes-section li {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-background {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
 
 .skills-container {
@@ -176,16 +266,22 @@ section {
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
 footer {
-    background-color: #333;
+    background-color: transparent; /* Make footer background transparent */
     color: white;
     padding: 2rem;
     text-align: center;
 }
+
+/* footer h1 {
+    margin-bottom: 0.5rem;
+} */
 
 footer p {
     margin-bottom: 1rem; /* Adds spacing below the text */
@@ -206,6 +302,8 @@ footer input, footer textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem; /* Increased font size of placeholder text */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background to inputs */
+    color: white; /* Text color for inputs */
 }
 
 footer textarea {

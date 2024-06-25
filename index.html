@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <div class="container">
+
     <!-- ------------------------------- NAVBAR -------------------------------- -->
+    <header>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="path-to-your-resume.pdf" target="_blank" class="resume-button">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -27,9 +30,9 @@
             <div class="hero-text">
                 <p>Hi, my name is</p>
                 <h1>Alexandra Blais</h1>
-                <p>A passionate computer science student... description...</p>
+                <p>A passionate computer science and psychology student... description...</p>
                 <div class="social-icons">
-                    <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="alexandrablais@icloud.com"><i class="fas fa-envelope"></i></a>
                     <a href="www.linkedin.com/in/alexandrablais" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/aljabl" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="path-to-your-resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
@@ -41,13 +44,50 @@
         </div>
     </section>
 
+    <!-- --------------------------- SKILLS AND CLASSES SECTION ---------------------------- -->
+    <section id="skills-and-classes">
+        <!-- Skills Section -->
+        <div class="skills-section">
+            <h1>Skills</h1>
+            <div class="skills-background">
+                <div class="skills-container">
+                    <span class="tag">C</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">ASM (AVR)</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">R</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">LaTeX</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Linux</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Classes Section -->
+        <div class="classes-section">
+            <h1>Relevant Classes</h1>
+            <ul>
+                <li>Algorithms and Data Structures I and II</li>
+                <li>Software Development Methods</li>
+                <li>Introduction to Computer Architecture</li>
+                <li> Cognitive Neuroscience</li>
+                <!-- Add more classes as needed -->
+            </ul>
+        </div>
+    </section>
+
 <!-- -------------------------- PROJECTS SECTION --------------------------- -->
     <section id="projects">
         <h1>Projects</h1>
         <div class="project-container">
                 <a href="https://github.com/TalentedB/visual-assistant" class="project">
-                <h2>Visual Assistant</h2>
-                <p>This is a brief description.</p>
+                <h2 >Uvic GDSC Hack4Everyone: Visual Assistant</h2>
+                <h5> Mar 2024 - 1st place </h5>
+                <p>Collaborated with three peers to develop a gesture-based computer control system that utilizes TensorFlow and
+                    OpenCV, enabling users to navigate and interact with a computer via hand gestures. </p>
                 <div class="tags">
                     <span class="tag">Python</span>
                 </div>
@@ -55,7 +95,10 @@
 
                 <div class="project no-hover">
                 <h2>Airline Route Data Unix Filter</h2>
-                <p>This is a brief description.</p>
+                <h5>May 2024</h5>
+                <p>Developed a data processing CLI utility in C, engineered to parse and handle airline route data using user-defined
+                    filters. The utility ingests airline route data from a .csv file and outputs a file enumerating airline routes that satisfy
+                    the criteria dictated by the provided filters.</p>
                 <div class="tags">
                     <span class="tag">C</span>
                 </div>
@@ -63,15 +106,27 @@
 
                 <a href="https://github.com/aljabl/Arduino-mega2560-Projects" class="project">
                 <h2>Arduino mega2560 Programming</h2>
-                <p>This is a brief description.</p>
+                <h5>Feb-Mar 2024</h5>
+                <p>Gained practical experience in low-level programming; learned to implement interrupts and interrupt handlers, use
+                    timers, understand stack frames, detect ADC events, and implement polling loops.</p>
                 <div class="tags">
                     <span class="tag">ASM</span>
                     <span class="tag">C</span>
                 </div>
                 </a>
 
+                <div class="project no-hover">
+                    <h2>UVic AI Ultimate-tic-tac-toe</h2>
+                    <h5>Feb 2024</h5>
+                    <p>I worked as part of a four-person team in an engaging six-hour session dedicated to developing an innovative recursive algorithm for Ultimate Tic Tac Toe. Our goal was to create a dynamic and evolving max-min cut strategy to enhance gameplay dynamics and strategic depth.</p>
+                    <div class="tags">
+                        <span class="tag">C</span>
+                    </div>
+                    </div>
+
                 <a href="https://github.com/aljabl/Personal-Website" class="project">
-                <h2>Personal Portfolio Website</h2>
+                <h2>Personal Portfolio Website </h2> 
+                <h5>Ongoing</h5>
                 <p>This is a brief description.</p>
                 <div class="tags">
                     <span class="tag">HTML</span>
@@ -81,25 +136,7 @@
         </div>
     </section>
 
-    <!-- --------------------------- SKILLS SECTION ---------------------------- -->
-    <section id="skills">
-        <h1>Skills</h1>
-        <div class="skills-background">
-            <div class="skills-container">
-                <span class="tag">C</span>
-                <span class="tag">Java</span>
-                <span class="tag">Python</span>
-                <span class="tag">ASM (AVR)</span>
-                <span class="tag">Git</span>
-                <span class="tag">R</span>
-                <span class="tag">CSS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">LaTeX</span>
-                <span class="tag">Bash</span>
-                <span class="tag">Linux</span>
-            </div>
-        </div>
-    </section>
+
 
 <!-- ------------------------------- FOOTER -------------------------------- -->
     <footer id="contact">
@@ -115,5 +152,6 @@
 
     <!-- Font Awesome script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    </div>
 </body>
 </html>
