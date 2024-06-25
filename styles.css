@@ -88,6 +88,60 @@ section {
     border-radius: 50%;
 }
 
+/* ----------------------------- PROJECT SECTION ---------------------------- */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.project {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+    text-decoration: none;
+    color: black;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.tags {
+    margin-top: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.project:hover {
+    background-color: #e0e0e0;
+}
+
+.no-hover:hover {
+    background-color: #f5f5f5;
+}
+
+/* ------------------------------ SKILLS SECTION ----------------------------- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
 /* --------------------------------- FOOTER --------------------------------- */
 
 footer {
